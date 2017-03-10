@@ -29,7 +29,9 @@
     "db:migrate-down": "./src/server/database/migrate.sh down",
     "db:migrate-down-all": "./src/server/database/migrate.sh down-all",
     "lint": "eslint 'src/**/*.js' 'tests/*.js' 'webpack/*.js'",
-    "profile": "NODE_ENV=production webpack --config ./webpack/prod.babel.js --profile --json > stats.json"
+    "profile": "NODE_ENV=production webpack --config ./webpack/prod.babel.js --profile --json > stats.json",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "pre-commit": [],
   "devDependencies": {
@@ -76,14 +78,14 @@
     "auth0-lock": "^9.2.1",
     "babel-polyfill": "6.9.1",
     "babel-runtime": "6.9.2",
-    "body-parser": "1.15.1",
+    "body-parser": "1.17.1",
     "compression": "1.6.2",
     "cors": "2.7.1",
     "dotenv": "^2.0.0",
     "dotenv-expand": "^0.1.0",
     "email-addresses": "^2.0.2",
     "es6-promisify": "4.1.0",
-    "express": "4.13.4",
+    "express": "4.15.2",
     "express-jwt": "3.4.0",
     "font-awesome": "^4.6.3",
     "graphiql": "0.7.1",
@@ -113,17 +115,19 @@
     "redux-logger": "2.6.1",
     "redux-optimistic-ui": "0.4.0",
     "redux-promise": "0.5.3",
-    "redux-socket-cluster": "0.5.1",
+    "redux-socket-cluster": "0.7.0",
     "redux-thunk": "2.1.0",
     "rethink-migrate": "^1.3.1",
     "rethinkdbdash": "2.3.6",
     "serve-favicon": "^2.3.0",
-    "socketcluster": "^4.6.2",
+    "socketcluster": "^5.0.1",
     "socketcluster-client": "^4.3.18",
-    "tinycolor2": "^1.3.0"
+    "tinycolor2": "^1.3.0",
+    "snyk": "^1.25.2"
   },
   "engines": {
     "node": "6.2.0",
     "npm": "3.9.3"
-  }
+  },
+  "snyk": true
 }
