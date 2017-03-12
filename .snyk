@@ -1,0 +1,17 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.7.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:marked:20170112':
+    - graphiql > marked:
+        patched: '2017-03-10T00:50:03.699Z'
+  'npm:ws:20160920':
+    - socketcluster > socketcluster-server > ws:
+        patched: '2017-03-10T00:50:03.699Z'
+    - redux-socket-cluster > socketcluster > socketcluster-server > ws:
+        patched: '2017-03-10T00:50:03.699Z'
+    - socketcluster > sc-broker-cluster > socketcluster-server > ws:
+        patched: '2017-03-10T00:50:03.699Z'
+    - redux-socket-cluster > socketcluster > sc-broker-cluster > socketcluster-server > ws:
+        patched: '2017-03-10T00:50:03.699Z'
